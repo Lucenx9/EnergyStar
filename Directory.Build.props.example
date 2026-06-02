@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <GamePath>CHANGE_ME_TO_YOUR_STARDEW_VALLEY_FOLDER</GamePath>
+  </PropertyGroup>
+</Project>

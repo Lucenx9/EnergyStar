@@ -1,0 +1,15 @@
+.dotnet/
+.downloads/
+.github-token
+.nuget/
+.smapi/
+.xdg/
+Directory.Build.props
+bin/
+obj/
+src/**/bin/
+src/**/obj/
+tests/**/bin/
+tests/**/obj/
+dist/*
+!dist/EnergyStar 1.1.0.zip

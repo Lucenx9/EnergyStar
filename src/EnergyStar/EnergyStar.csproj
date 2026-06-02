@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NoWarn>$(NoWarn);CS8032</NoWarn>
+    <RunAnalyzers>false</RunAnalyzers>
+    <Version>1.1.0</Version>
+    <EnableModDeploy>false</EnableModDeploy>
+    <EnableModZip>true</EnableModZip>
+    <ModFolderName>EnergyStar</ModFolderName>
+    <ModZipPath>$(MSBuildProjectDirectory)/../../dist</ModZipPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" PrivateAssets="all" ExcludeAssets="analyzers" />
+    <ProjectReference Include="../EnergyStar.Core/EnergyStar.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="manifest.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
