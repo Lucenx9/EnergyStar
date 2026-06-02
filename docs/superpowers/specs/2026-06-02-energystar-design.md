@@ -23,6 +23,7 @@ The mod will target `.NET 6`, use `Pathoschild.Stardew.ModBuildConfig` for SMAPI
 - When a new day starts, refill stamina to max and clear exhaustion.
 - During active gameplay, periodically refill stamina to max and clear exhaustion.
 - During active gameplay, keep the clock from advancing past 1:50 AM (`2550`) so the 2:00 AM pass-out does not trigger.
+- During active gameplay, keep player health at maximum so damage is immediately healed.
 - If the world is not loaded or the player object is unavailable, do nothing.
 
 ## Verification

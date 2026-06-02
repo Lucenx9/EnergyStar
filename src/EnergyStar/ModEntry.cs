@@ -35,6 +35,7 @@ public sealed class ModEntry : Mod
             return;
 
         EnergyKeeper.Apply(new FarmerEnergyState(Game1.player));
+        HealthKeeper.Apply(new FarmerHealthState(Game1.player));
         DayClockKeeper.Apply(new GameClockState());
     }
 }

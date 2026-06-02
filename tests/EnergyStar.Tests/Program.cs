@@ -7,7 +7,10 @@ var tests = new (string Name, Action Body)[]
     ("does not overfill invalid max stamina", TestInvalidMaxStaminaIsIgnored),
     ("leaves early day clock unchanged", TestLeavesEarlyDayClockUnchanged),
     ("freezes clock timer at 1:50 AM", TestFreezesClockTimerAtOneFifty),
-    ("clamps clock after 1:50 AM", TestClampsClockAfterOneFifty)
+    ("clamps clock after 1:50 AM", TestClampsClockAfterOneFifty),
+    ("restores health to maximum", TestRestoresHealthToMaximum),
+    ("does not report health changes when already full", TestNoChangeWhenHealthAlreadyFull),
+    ("does not overfill invalid max health", TestInvalidMaxHealthIsIgnored)
 };
 
 var failures = 0;
@@ -95,6 +98,36 @@ static void TestClampsClockAfterOneFifty()
     AssertEqualInt(0, state.GameTimeInterval, "timer should be reset after clamping");
 }
 
+static void TestRestoresHealthToMaximum()
+{
+    var state = new FakeHealthState(health: 12, maxHealth: 150);
+
+    var changed = HealthKeeper.Apply(state);
+
+    AssertTrue(changed, "expected health to be restored");
+    AssertEqualInt(150, state.Health, "health should be restored to max");
+}
+
+static void TestNoChangeWhenHealthAlreadyFull()
+{
+    var state = new FakeHealthState(health: 150, maxHealth: 150);
+
+    var changed = HealthKeeper.Apply(state);
+
+    AssertFalse(changed, "already-full health should not change");
+    AssertEqualInt(150, state.Health, "health should stay at max");
+}
+
+static void TestInvalidMaxHealthIsIgnored()
+{
+    var state = new FakeHealthState(health: 12, maxHealth: 0);
+
+    var changed = HealthKeeper.Apply(state);
+
+    AssertFalse(changed, "invalid max health should not change health");
+    AssertEqualInt(12, state.Health, "health should not change without a positive max");
+}
+
 static void AssertTrue(bool value, string message)
 {
     if (!value)
@@ -146,4 +179,17 @@ internal sealed class FakeClockState : IClockState
     public int TimeOfDay { get; set; }
 
     public int GameTimeInterval { get; set; }
+}
+
+internal sealed class FakeHealthState : IHealthState
+{
+    public FakeHealthState(int health, int maxHealth)
+    {
+        this.Health = health;
+        this.MaxHealth = maxHealth;
+    }
+
+    public int Health { get; set; }
+
+    public int MaxHealth { get; }
 }
