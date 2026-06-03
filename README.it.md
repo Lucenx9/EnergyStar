@@ -1,5 +1,7 @@
 # EnergyStar
 
+[![Tests](https://github.com/Lucenx9/EnergyStar/actions/workflows/tests.yml/badge.svg)](https://github.com/Lucenx9/EnergyStar/actions/workflows/tests.yml)
+
 [English](README.md)
 
 EnergyStar è una piccola mod SMAPI per Stardew Valley che mantiene pieni energia e salute del personaggio, rimuove la stanchezza, e impedisce lo svenimento delle 2:00 bloccando l'orologio all'1:50.
