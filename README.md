@@ -8,7 +8,7 @@ EnergyStar is a tiny SMAPI mod for Stardew Valley which keeps your farmer's stam
    - If you run Stardew Valley through Proton, install the Windows version of SMAPI and launch `StardewModdingAPI.exe` through Proton.
    - If you run Stardew Valley on Windows, install SMAPI normally for Windows.
 2. Download `EnergyStar 1.2.0.zip` from this repo's `dist` folder or from the GitHub release.
-3. Copy the `EnergyStar` folder into your `Stardew Valley/Mods` folder.
+3. Extract the zip, then copy the resulting `EnergyStar` folder into your `Stardew Valley/Mods` folder.
 4. Launch the game through SMAPI.
 
 The mod does not replace game files. To uninstall it, delete `Stardew Valley/Mods/EnergyStar`.
