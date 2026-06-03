@@ -1,5 +1,7 @@
 # EnergyStar
 
+[Italiano](README.it.md)
+
 EnergyStar is a tiny SMAPI mod for Stardew Valley which keeps your farmer's stamina and health full, clears exhaustion, and prevents the 2:00 AM pass-out by freezing the clock at 1:50 AM.
 
 ## Install
