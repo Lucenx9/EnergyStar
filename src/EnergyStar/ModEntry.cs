@@ -37,6 +37,7 @@ public sealed class ModEntry : Mod
         EnergyKeeper.Apply(new FarmerEnergyState(Game1.player));
         HealthKeeper.Apply(new FarmerHealthState(Game1.player));
 
+        // DayClockKeeper touches host-owned Game1 clock fields; energy and health are player-local.
         if (Context.IsMainPlayer)
             DayClockKeeper.Apply(new GameClockState());
     }
