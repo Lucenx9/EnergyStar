@@ -11,7 +11,7 @@ EnergyStar è una piccola mod SMAPI per Stardew Valley che mantiene pieni energi
 1. Installa SMAPI per la tua versione di Stardew Valley.
    - Se usi Stardew Valley tramite Proton, installa la versione Windows di SMAPI e avvia `StardewModdingAPI.exe` tramite Proton.
    - Se usi Stardew Valley su Windows, installa normalmente SMAPI per Windows.
-2. Scarica `EnergyStar 1.2.0.zip` dalla cartella `dist` di questo repo o dalla release GitHub.
+2. Scarica `EnergyStar 1.2.1.zip` dalla cartella `dist` di questo repo o dalla release GitHub.
 3. Estrai lo zip, poi copia la cartella `EnergyStar` ottenuta dentro la cartella `Stardew Valley/Mods`.
 4. Avvia il gioco tramite SMAPI.
 

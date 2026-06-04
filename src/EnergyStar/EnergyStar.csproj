@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <NoWarn>$(NoWarn);CS8032</NoWarn>
     <RunAnalyzers>false</RunAnalyzers>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <EnableModDeploy>false</EnableModDeploy>
     <EnableModZip>true</EnableModZip>
     <ModFolderName>EnergyStar</ModFolderName>

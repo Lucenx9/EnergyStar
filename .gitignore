@@ -14,3 +14,4 @@ tests/**/obj/
 dist/*
 !dist/EnergyStar 1.1.0.zip
 !dist/EnergyStar 1.2.0.zip
+!dist/EnergyStar 1.2.1.zip

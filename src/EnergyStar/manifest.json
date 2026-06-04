@@ -1,7 +1,7 @@
 {
   "Name": "EnergyStar",
   "Author": "Simone",
-  "Version": "1.2.0",
+  "Version": "1.2.1",
   "Description": "Keeps farmer stamina and health full, clears exhaustion, and prevents the 2:00 AM pass-out.",
   "UniqueID": "Simone.EnergyStar",
   "EntryDll": "EnergyStar.dll",
